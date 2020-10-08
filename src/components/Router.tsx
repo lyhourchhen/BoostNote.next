@@ -45,6 +45,13 @@ export default () => {
         break
       }
       return <StorageEditPage key={routeParams.storageId} storage={storage} />
+    case 'workspaces.show':
+      return (
+        <webview
+          src='https://boosthub.io/rokt33r'
+          style={{ width: '100%', height: '100%' }}
+        />
+      )
   }
   return (
     <NotFoundPageContainer>

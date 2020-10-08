@@ -23,7 +23,6 @@ import NavigatorHeader from '../atoms/NavigatorHeader'
 import NavigatorButton from '../atoms/NavigatorButton'
 import { dispatchNoteDetailFocusTitleInputEvent } from '../../lib/events'
 import { useAnalytics, analyticsEvents } from '../../lib/analytics'
-import NavigatorSeparator from '../atoms/NavigatorSeparator'
 
 interface StorageNavigatorFragmentProps {
   storage: NoteStorage

@@ -125,6 +125,13 @@ const StorageNavigator = () => {
     <Container>
       <StoragesContainer onContextMenu={openSideNavContextMenu}>
         {storages}
+        <NavigatorButton
+          onClick={() => {
+            push('/app/workspaces')
+          }}
+        >
+          R
+        </NavigatorButton>
       </StoragesContainer>
       <ControlContainer>
         <NavigatorButton onClick={goToStorageCreatePage}>

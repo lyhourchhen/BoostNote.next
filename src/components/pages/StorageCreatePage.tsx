@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import PageContainer from '../atoms/PageContainer'
 import {
@@ -36,6 +36,10 @@ const StorageCreateForm = ({ storageType }: StorageCreateFormProps) => {
 const StorageCreatePage = () => {
   const { t } = useTranslation()
   const [storageType, setStorageType] = useState<'cloud' | 'local' | 'fs'>('fs')
+
+  const openBoostHubSignUpWindow = useCallback(() => {
+    openBoostHubSignUpWindow
+  }, [])
 
   return (
     <PageContainer>
@@ -79,6 +83,12 @@ const StorageCreatePage = () => {
         </FormGroup>
 
         <StorageCreateForm storageType={storageType} />
+
+        <hr />
+
+        <webview src='https://boosthub.io/signup' />
+
+        <button onClick={openBoostHubSignUpWindow}>Sign Up BoostHub</button>
       </PageScrollableContent>
     </PageContainer>
   )

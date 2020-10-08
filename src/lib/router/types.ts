@@ -48,6 +48,10 @@ export interface UnknownRouteparams extends BaseRouteParams {
   name: 'unknown'
 }
 
+export interface WorkspaceShowRouteParams extends BaseRouteParams {
+  name: 'workspaces.show'
+}
+
 export type AllRouteParams =
   | StorageCreate
   | StorageSettings
@@ -56,3 +60,4 @@ export type AllRouteParams =
   | StorageTagsRouteParams
   | StorageAttachmentsRouteParams
   | UnknownRouteparams
+  | WorkspaceShowRouteParams

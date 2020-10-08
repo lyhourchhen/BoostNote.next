@@ -139,6 +139,10 @@
           return CSON.stringify(value)
         }
 
+        function openNewWindow(options) {
+          return new electron.remote.BrowserWindow(options)
+        }
+
         window.__ELECTRON_ONLY__ = {}
         window.__ELECTRON_ONLY__.openExternal = openExternal
         window.__ELECTRON_ONLY__.readFile = readFile
@@ -153,6 +157,7 @@
         window.__ELECTRON_ONLY__.readFileTypeFromBuffer = readFileTypeFromBuffer
         window.__ELECTRON_ONLY__.parseCSON = parseCSON
         window.__ELECTRON_ONLY__.stringifyCSON = stringifyCSON
+        window.__ELECTRON_ONLY__.openNewWindow = openNewWindow
       })()
     </script>
   </body>

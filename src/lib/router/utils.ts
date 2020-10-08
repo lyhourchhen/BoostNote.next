@@ -43,6 +43,12 @@ export const useRouteParams = () => {
   return useMemo((): AllRouteParams => {
     const names = pathname.slice('/app'.length).split('/').slice(1)
 
+    if (names[0] === 'workspaces') {
+      return {
+        name: 'workspaces.show',
+      }
+    }
+
     if (names[0] === 'storages' && names[1] == null) {
       return {
         name: 'storages.create',

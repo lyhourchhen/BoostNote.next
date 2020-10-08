@@ -1,5 +1,6 @@
 import { Stats, Dirent } from 'fs'
 import { JsonValue } from 'type-fest'
+import { BrowserWindowConstructorOptions, BrowserWindow } from 'electron'
 
 const __ELECTRON_ONLY__: {
   readFile(pathname: string): Promise<string | Buffer>
@@ -23,6 +24,7 @@ const __ELECTRON_ONLY__: {
   openExternal(url: string): void
   parseCSON(value: string): JsonValue
   stringifyCSON(value: any): string
+  openNewWindow(options: BrowserWindowConstructorOptions): BrowserWindow
 } = (window as any).__ELECTRON_ONLY__
 
 const {
